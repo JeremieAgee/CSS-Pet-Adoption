@@ -164,5 +164,25 @@ footer{
 @media (max-width: 450px){
     .flex-container-row{
         flex-direction: column;
-    }
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 90px auto auto auto;
+        grid-template-areas: 
+          "header"
+          "sidebar"
+          "main"
+          "footer";
+      }
+      .grid-item-c{
+        display: flex;
+        flex-direction: row;
+        column-gap: 10px;
+      }
+    
+}
+h3{
+    padding: 1px;
+    margin: 0px;
 }
