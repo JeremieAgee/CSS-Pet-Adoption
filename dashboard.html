@@ -6,25 +6,50 @@
     <title>Pet Adoption</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header> 
+<body class="grid-container">
+    <header class="grid-item-a"> 
+        <h1 class="flex-item-start">Pet Adoption Agency</h1>
         <nav>
-        <h1>Pet Adoption Agency</h1>
-          <ul class="flex-container">
-            <li class="nav"></li><a class="flex-item" href="index.html">Home</a></li>
-            <li class="nav"></li><a class="flex-item" href="pets.html">Pets</a></li>
-            <li class="nav"><a class="flex-item" href="adoption.html">Adoption</a></li>
+          <ul>
+            <li class="nav"><a class="flex-item" href="index.html">Home</a></li>
+            <li class="nav"><a class="flex-item" href="browse.html">Pets</a></li>
+            <li class="nav"><a class="flex-item" href="dashboard.html">Adoption</a></li>
           </ul>  
         </nav>
     </header>
-    <main>
-        
+    <section class="grid-item-c">
+           <h3>Item1</h3>
+           <h3>Item2</h3>
+           <h3>Item3</h3>
+    </section>
+    <main class="grid-item-b">
+        <h2>New Arrivals</h2>
+        <section>
+            <div class="flex-container-row">
+                <div class="new-arrivals-div">
+                    <img src="/img/bunny2.png" class="new-arrivals">
+                </div>
+                <p>This is bunny 2. She just arrived on Monday.</p>
+            </div>
+            <div class="flex-container-row">
+                <div class="new-arrivals-div">
+                    <img src="/img/dog3.png" class="new-arrivals">
+                </div>
+                <p>This is pup 3. He arrived earlier today.</p>
+            </div>
+            <div class="flex-container-row">
+                <div class="new-arrivals-div">
+                    <img src="/img/cat2.png" class="new-arrivals">
+                </div>
+                <p>This is cat 2. She was dropped off yesterday evening.</p>
+            </div>
+        </section>
     </main>
-    <footer class="flex-container">
-        <div class="flex-item-right">
+    <footer class="grid-item-d flex-container-row">
+        <div class="flex-item-start">
             &copy; Pet Adoption Agency
         </div>
-        <div class="flex-item-left">
+        <div>
             <table>
                 <thead>
                     <th>Contact Info</th>

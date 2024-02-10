@@ -1,31 +1,31 @@
 html{
     background-color: rgb(83, 221, 3);
+    height: 100%;
 }
 body{
-    padding-left: 1px;
-    padding-right: 1px;
     background-color: rgb(83, 221, 3);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    min-height: 90vh;
+    min-width:  50px;
 }
 header{
     display: flex;
     background-color: aqua;
-    flex-direction: column;
-    border: 3px solid purple;
+    border: 2px solid purple;
     width: 100%;
+    height: 90px;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 nav{
-    justify-content: right;
-    align-items: center;
+    justify-self: flex-end;
+    align-self: flex-end;
+    align-items: flex-end;
     display: flex;
-    
 }
 .flex-container{
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     padding-bottom: 5px;
 }
@@ -35,10 +35,6 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.flex-item{
-    flex-direction: column;
-    padding: 2px;
 }
 .flex-item-left {
     flex: 75%; 
@@ -66,11 +62,7 @@ ul{
 a{
     text-decoration: none;
 }
-@media (max-width: 450px){
-    .flex-container{
-        flex-direction: column;
-    }
-}
+
 footer{
     display: flex;
     height: 25px;
@@ -78,6 +70,7 @@ footer{
     padding-top: 25px;
 }
 #cta{
+    width: 80px;
     color: rgb(113, 0, 91);
     border: 1px solid rgb(113, 0, 91);
     border-style: dotted;
@@ -90,19 +83,20 @@ footer{
     border: 1px solid purple;
 }
 .card-top{
+    object-fit: fill;
     height: 50%;
     width: 100%;
 }
 .card-img{
-    object-fit: contain;
+    object-fit: fill;
     height: 100%;
     width: 100%;
 }
 .flex-box{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
+    column-count: 3;
+    column-fill: balance;
+    padding-top: 5px;
+    row-gap: 5px;
 }
 .indexImg{
     object-fit: contain;
@@ -110,4 +104,65 @@ footer{
 }
 #company{
     font-style: italic;
+}
+.grid-item-a {
+    grid-area: header;
+  }
+  .grid-item-b {
+    grid-area: main;
+  }
+  .grid-item-c {
+    grid-area: sidebar;
+  }
+  .grid-item-d {
+    grid-area: footer;
+  }
+  .flex-item-end{
+    display: flex;
+
+  }
+  .flex-item-start{
+    flex: content;
+    align-content: end;
+    justify-content: end;
+    justify-self: flex-end;
+    align-self: flex-end;
+    padding: 2px;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 90px auto auto;
+    grid-template-areas: 
+      "header header header header"
+      "main main main sidebar"
+      "footer footer footer footer";
+  }
+  .new-arrivals-div{
+    height: 100px;
+    width: 100px;
+
+  }
+  .new-arrivals{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+#cta:hover{
+    width: 125px;
+    font-size: 25px;
+    
+}
+.flex-container-row{
+    display: flex;
+    flex-direction: row;
+}
+.flex-container-column{
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 450px){
+    .flex-container-row{
+        flex-direction: column;
+    }
 }
